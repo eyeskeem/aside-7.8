@@ -39,6 +39,10 @@ body {
 }
 
 aside {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100vh;
     width: 320px;
     min-width: 0;
     max-width: 100%;
@@ -108,9 +112,9 @@ aside {
 
 .aside-contact__icons {
     display: flex;
-    margin-top: 268px;
     margin-left: 24px;
     gap: 16px;
+    margin-top: auto;
 }
 .aside-contact__icons img:first-child:hover {
     transition: all 1s ease;
