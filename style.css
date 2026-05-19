@@ -60,19 +60,30 @@ aside {
     padding-left: 24px;
     gap: 16.73px;
 }
-.aside-header img:first-child {
+.button-icons {
+    border: none;
+    background-color: white;
+}
+.aside-header button:first-child {
     transition: all 1s ease;
 }
-.aside-header img:first-child:hover {
+.aside-header button:first-child:hover {
     opacity: 1;
     transform: translateY(-10%);
 }
-.aside-header img:last-child {
+.aside-header button:nth-child(2) {
+   transition: transform 1s ease-in;
+}
+.aside-header button:nth-child(2):hover {
+    transform: perspective(100px) rotateX(50deg);
+    transition: transform 1s ease-out;
+}
+.aside-header button:last-child {
     margin-left: auto;
     margin-right: 24px;
     transition: all 1s ease;
 }
-.aside-header img:last-child:hover {
+.aside-header button:last-child:hover {
     opacity: 1;
     transform: translateY(-10%);
 }
@@ -84,6 +95,7 @@ aside {
     flex-direction: column;
     gap: 16px;
     margin-top: 53px;
+    margin-bottom: 20px;
 }
 
 .a-button {
@@ -93,6 +105,7 @@ aside {
     width: 100%;
     padding-left: 24px;
     background-color: white;
+
     font-family: 'TTlakes';
     font-weight: 500;
     font-size: 16px;
@@ -116,17 +129,21 @@ aside {
     gap: 16px;
     margin-top: auto;
 }
-.aside-contact__icons img:first-child:hover {
+.contact-icons {
+    border: none;
+    background-color: white;
+}
+.aside-contact__icons button:first-child:hover {
     transition: all 1s ease;
     opacity: 1;
     transform: translateY(-10%);
 }
-.aside-contact__icons img:nth-child(2):hover {
+.aside-contact__icons button:nth-child(2):hover {
     transition: all 1s ease;
     opacity: 1;
     transform: translateY(-10%);
 }
-.aside-contact__icons img:last-child:hover {
+.aside-contact__icons button:last-child:hover {
     transition: all 1s ease;
     opacity: 1;
     transform: translateY(-10%);
@@ -135,9 +152,17 @@ aside {
     margin-top: 16px;
     margin-left: 24px;
     font-size: 16px;
+
     font-family: 'TTlakes';
     font-size: 400;
     font-size: 16px;
+}
+.mail {
+    transition: font-size 1s ease;
+}
+.mail:hover {
+    font-size:18px;
+    color: #df39a7;
 }
 .aside-contact__info .number {
     margin-top: 12px;
@@ -149,13 +174,39 @@ aside {
 
 .aside-lang {
     display: flex;
+    flex-direction: row;
     margin-top: 40px;
     margin-left: 24px;
     gap: 7px;
+
     font-family: 'TTlakes';
     font-weight: 400;
     font-size: 16px;
 }
-.aside-lang span:first-child {
+.lang {
+    border: none;
+    background-color: white;
+
+    animation: pulse 1s infinite;
+
+    font-family: 'TTlakes';
+    font-weight: 400;
+    font-size: 16px;
+}
+.lang:focus {
     color: #7E7E82;
+}
+.lang:first-child {
+    color: #7E7E82;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
